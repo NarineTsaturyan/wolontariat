@@ -1,0 +1,12 @@
+name: 'Consent manager'
+type: module
+description: 'The consentmanager.net CMP (Consent Management Provider) allows your to easily collect consent form your websites visitors in order to become GDPR and CCPA compliant.'
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure: consent_manager.settings
+package: 'User interface'
+
+# Information added by Drupal.org packaging script on 2021-06-14
+version: '1.0.0'
+project: 'consent_manager'
+datestamp: 1623675811

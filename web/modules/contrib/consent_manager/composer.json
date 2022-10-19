@@ -1,0 +1,12 @@
+{
+    "name": "drupal/consent_manager",
+    "type": "drupal-module",
+    "description": "The consentmanager.net CMP (Consent Management Provider) allows your to easily collect consent form your websites visitors in order to become GDPR and CCPA compliant.",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/consent_manager",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/consent_manager",
+        "source": "http://cgit.drupalcode.org/consent_manager",
+    }
+}

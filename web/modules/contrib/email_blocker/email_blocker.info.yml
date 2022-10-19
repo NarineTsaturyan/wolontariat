@@ -1,0 +1,11 @@
+name: 'Email Blocker'
+type: module
+description: 'Email Blocker blocks all outgoing emails based on the configuration setting.'
+core_version_requirement: ^8.8 || ^9
+configure : email_blocker.email_blocker_settings_form
+package: 'Mail'
+
+# Information added by Drupal.org packaging script on 2022-02-08
+version: '8.x-1.3'
+project: 'email_blocker'
+datestamp: 1644317867

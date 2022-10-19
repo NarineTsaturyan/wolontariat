@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains email_blocker.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function email_blocker_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // The primary module help for the email_blocker module.
+    case 'help.page.email_blocker':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module blocks all outgoing emails based on the configuration setting.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_mail_alter().
+ */
+function email_blocker_mail_alter(&$message) {
+  $config = \Drupal::config('email_blocker.emailblockersettings');
+  if ($config->get('block_emails') != FALSE) {
+    $message['send'] = FALSE;
+  }
+  if ($config->get('block_email_display_email') != FALSE) {
+    // Logs the email message object as a JSON in recent log messages.
+    \Drupal::logger('email_blocker')->notice(json_encode($message));
+  }
+}

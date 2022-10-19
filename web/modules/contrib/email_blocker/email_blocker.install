@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Uninstall file.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function email_blocker_uninstall() {
+  \Drupal::configFactory()->getEditable('email_blocker.emailblockersettings')->delete();
+}

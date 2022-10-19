@@ -1,0 +1,4 @@
+services:
+  consent_manager.code_manager:
+    class: Drupal\consent_manager\CodeManager
+    arguments: ['@config.factory']

@@ -1,0 +1,6 @@
+email_blocker.email_blocker_settings_form:
+  title: 'Email Blocker Settings '
+  route_name: email_blocker.email_blocker_settings_form
+  description: 'Manage Email Blocking'
+  parent: system.admin_config_system
+  weight: 99

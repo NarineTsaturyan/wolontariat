@@ -1,0 +1,3 @@
+email_blocker:
+  block_emails: FALSE
+  block_email_display_email: FALSE

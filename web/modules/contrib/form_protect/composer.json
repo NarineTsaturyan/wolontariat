@@ -1,0 +1,23 @@
+{
+  "name": "drupal/form_protect",
+  "type": "drupal-module",
+  "description": "Effective form spam protection.",
+  "keywords": [
+    "Drupal"
+  ],
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/form_protect",
+  "authors": [
+    {
+      "name": "Claudiu Cristea",
+      "homepage": "https://www.drupal.org/u/claudiu.cristea",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/form_protect",
+    "source": "hhttps://git.drupalcode.org/project/form_protect"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

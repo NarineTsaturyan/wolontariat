@@ -1,0 +1,4 @@
+administer consent manager settings:
+  title: 'Administer Consent Manager settings'
+  description: 'Allow to administer Consent Manager settings'
+  restrict access: true

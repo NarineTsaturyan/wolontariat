@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains consent_manager.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function consent_manager_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the consent_manager module.
+    case 'help.page.consent_manager':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The consentmanager.net CMP (Consent Management Provider) allows your to easily collect consent form your websites visitors in order to become GDPR and CCPA compliant.') . '</p>';
+      $output .= '<ol>';
+      $output .= '<li>' . t('Login to your <a href=":url" target="_blank">consentmanager.net</a> account.', [':url' => 'https://www.consentmanager.net']) . '</li>';
+      $output .= '<li>' . t('Setup your website(s).') . '</li>';
+      $output .= '<li>' . t('Create the code and paste it on the module settings <a href=":url">page</a>.', [':url' => '/admin/config/services/consent-manager']) . '</li>';
+      $output .= '</ol>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function consent_manager_page_attachments(array &$attachments) {
+  /** @var \Drupal\Core\Routing\AdminContext $admin_context */
+  $admin_context = \Drupal::service('router.admin_context');
+  $route_match = \Drupal::routeMatch();
+  // Skip for admin routes.
+  if ($admin_context->isAdminRoute($route_match->getRouteObject())) {
+    return;
+  }
+  /** @var \Drupal\consent_manager\CodeManager $code_manager */
+  $code_manager = \Drupal::service('consent_manager.code_manager');
+  if ($code = $code_manager->getCode()) {
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#type' => 'markup',
+        '#markup' => $code,
+      ],
+      'consent_manager',
+    ];
+  }
+}

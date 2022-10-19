@@ -1,0 +1,9 @@
+consent_manager.settings:
+  path: '/admin/config/services/consent-manager'
+  defaults:
+    _form: '\Drupal\consent_manager\Form\ConsentManagerSettingsForm'
+    _title: 'Consent Manager Settings'
+  requirements:
+    _permission: 'administer consent manager settings'
+  options:
+    _admin_route: TRUE

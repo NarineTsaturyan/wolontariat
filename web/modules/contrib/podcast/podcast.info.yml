@@ -1,0 +1,9 @@
+name: Podcast
+description: Allows creating podcasts using views.
+type: module
+core_version_requirement: ^8 || ^9
+
+# Information added by Drupal.org packaging script on 2021-09-25
+version: '8.x-1.2'
+project: 'podcast'
+datestamp: 1632579024

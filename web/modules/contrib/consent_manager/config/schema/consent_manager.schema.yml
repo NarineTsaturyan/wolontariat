@@ -1,0 +1,15 @@
+# Schema for the configuration files of the Consent Manager module.
+
+consent_manager.settings:
+  type: config_object
+  label: 'Consent Manager Settings'
+  mapping:
+    blocking_mode:
+      type: string
+      label: 'Blocking mode'
+    cmp_id:
+      type: integer
+      label: 'Id'
+    custom_code:
+      type: string
+      label: 'Custom HTML code'

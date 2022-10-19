@@ -1,0 +1,10 @@
+type: module
+name: Form Protect
+description: 'Simple, non-invasive spam protection for forms.'
+core_version_requirement: ^8 || ^9
+configure: form_protect.admin
+
+# Information added by Drupal.org packaging script on 2020-06-08
+version: '2.0.0'
+project: 'form_protect'
+datestamp: 1591625680
