@@ -785,12 +785,14 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$config_directories['sync'] = 'sites/wolontariat.sgh.waw.pl/files/config_JrwWD1SBKpjYX72FsAgFeX-JWa7dNvTqdCcDz-5GH7Wtui1EFUkXhDE3iw8wO7Gg-F9H-pqSjg/sync';
+$config_directories['sync'] = '../config';
+$settings['config_sync_directory'] = '../config';
+
 $settings['trusted_host_patterns'] = [
     '^www\.wolontariat-t\.sgh\.waw\.pl$',
     '^wolontariat-t\.sgh\.waw\.pl$',
 ];
-$settings['config_sync_directory'] = '/var/www/html/dpd-test.sgh.waw.pl/private';
+
 
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
