@@ -57,3 +57,4 @@
  */
 
 $sites['wolontariat-t.sgh.waw.pl'] = 'wolontariat.sgh.waw.pl';
+$sites['wolontariat.local'] = 'wolontariat.sgh.waw.pl';

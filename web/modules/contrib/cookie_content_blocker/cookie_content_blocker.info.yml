@@ -8,7 +8,7 @@ configure: cookie_content_blocker.settings
 dependencies:
   - drupal:system (>=8.8)
 
-# Information added by Drupal.org packaging script on 2020-12-11
-version: '8.x-1.7'
+# Information added by Drupal.org packaging script on 2022-08-05
+version: '2.0.0'
 project: 'cookie_content_blocker'
-datestamp: 1607681414
+datestamp: 1659703030

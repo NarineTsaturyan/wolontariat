@@ -39,7 +39,7 @@
         "drupal/consent_manager": "^1.0",
         "drupal/console": "^1.9",
         "drupal/context": "^4.1",
-        "drupal/cookie_content_blocker": "^1.7",
+        "drupal/cookie_content_blocker": "^2.0",
         "drupal/cookies": "^1.0",
         "drupal/core": "^9.3",
         "drupal/core-composer-scaffold": "^9.3",
