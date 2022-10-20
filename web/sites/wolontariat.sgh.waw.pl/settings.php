@@ -773,10 +773,7 @@ $settings['entity_update_backup'] = TRUE;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+
 $databases['default']['default'] = array (
   'database' => 'xx',
   'username' => 'xx',
@@ -794,3 +791,8 @@ $settings['trusted_host_patterns'] = [
     '^wolontariat-t\.sgh\.waw\.pl$',
 ];
 $settings['config_sync_directory'] = '/var/www/html/dpd-test.sgh.waw.pl/private';
+
+
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
