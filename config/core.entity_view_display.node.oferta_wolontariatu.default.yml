@@ -1,0 +1,106 @@
+uuid: ba57fb3d-a1f5-422c-b5db-1be41eb121d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.oferta_wolontariatu.body
+    - field.field.node.oferta_wolontariatu.field_czestotliwosc_zaangazowani
+    - field.field.node.oferta_wolontariatu.field_data_wydarzenia
+    - field.field.node.oferta_wolontariatu.field_kategorie
+    - field.field.node.oferta_wolontariatu.field_lokalizacja_wolontariatu
+    - field.field.node.oferta_wolontariatu.field_organizacja
+    - field.field.node.oferta_wolontariatu.field_pdf
+    - field.field.node.oferta_wolontariatu.field_typ_zadan
+    - node.type.oferta_wolontariatu
+  module:
+    - datetime
+    - entity_print
+    - file
+    - text
+    - user
+third_party_settings:
+  entity_print:
+    pdf_label: 'View PDF'
+id: node.oferta_wolontariatu.default
+targetEntityType: node
+bundle: oferta_wolontariatu
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  entity_print_view_pdf:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_czestotliwosc_zaangazowani:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_data_wydarzenia:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: Europe/Warsaw
+      format_type: medium
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_kategorie:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_lokalizacja_wolontariatu:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_organizacja:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_pdf:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_typ_zadan:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_word_docx: true
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: a3949c68-89c7-4f13-af46-98a16ef8d38c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_wydarzenia
+    - node.type.oferta_wolontariatu
+  module:
+    - datetime
+id: node.oferta_wolontariatu.field_data_wydarzenia
+field_name: field_data_wydarzenia
+entity_type: node
+bundle: oferta_wolontariatu
+label: 'Data wydarzenia'
+description: 'Data i godzina początku wydarzenia i zakończenie'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

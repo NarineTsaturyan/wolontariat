@@ -1,0 +1,14 @@
+uuid: fd4ce9df-b767-4c74-91aa-27933c8b858a
+langcode: pl
+status: true
+dependencies:
+  config:
+    - user.role.adminis
+  module:
+    - user
+id: user_add_role_action.adminis
+label: 'Dodaj rolę Administrator strony wskazanym użytkownikom'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: adminis

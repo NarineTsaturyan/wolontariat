@@ -1,0 +1,38 @@
+uuid: c7ee1526-1c7c-4dd2-86ae-44ecd23b3ba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo
+    - node.type.organizacja
+  module:
+    - image
+id: node.organizacja.field_logo
+field_name: field_logo
+entity_type: node
+bundle: organizacja
+label: Logo
+description: Logo
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 220x220
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 607f56ab-d908-4370-bd32-3b50089e615a
+    alt: Logo
+    title: Logo
+    width: 220
+    height: 220
+field_type: image

@@ -1,0 +1,10 @@
+uuid: d4982c43-059a-4d1a-ac94-ab0ae194744d
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BCM-vV1zzRaLHN18dqAR_CuGOj8AFJvTx7BKl_8Gcxc
+id: tools
+label: Narzędzia
+description: 'Odnośniki do narzędzi użytkownika, często dodanych przez moduły'
+locked: true

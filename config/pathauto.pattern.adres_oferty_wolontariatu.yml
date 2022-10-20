@@ -1,0 +1,22 @@
+uuid: faaea920-44d0-4434-964b-a1eb551c4c56
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: adres_oferty_wolontariatu
+label: 'Adres Oferty wolontariatu'
+type: 'canonical_entities:node'
+pattern: '/organizacja/oferty/[node:title]'
+selection_criteria:
+  076e0c62-b48a-42cc-ae3e-e9e865ec3bea:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 076e0c62-b48a-42cc-ae3e-e9e865ec3bea
+    context_mapping:
+      node: node
+    bundles:
+      oferta_wolontariatu: oferta_wolontariatu
+selection_logic: and
+weight: -8
+relationships: {  }

@@ -1,0 +1,8 @@
+uuid: ae54d8ef-eaa9-4444-b83a-b5d2b80e7ffd
+langcode: pl
+status: true
+dependencies: {  }
+name: Kategorie
+vid: kategorie
+description: 'Kategorie zadań'
+weight: -10

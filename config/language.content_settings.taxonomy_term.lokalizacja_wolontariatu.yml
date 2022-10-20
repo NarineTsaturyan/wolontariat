@@ -1,0 +1,11 @@
+uuid: f55821cd-f9e8-4506-a064-76468f6cc2a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.lokalizacja_wolontariatu
+id: taxonomy_term.lokalizacja_wolontariatu
+target_entity_type_id: taxonomy_term
+target_bundle: lokalizacja_wolontariatu
+default_langcode: site_default
+language_alterable: false

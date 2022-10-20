@@ -1,0 +1,8 @@
+uuid: 8bcb7d1a-7ba8-42af-a73b-5f5e9d9dcb3f
+langcode: pl
+status: true
+dependencies: {  }
+name: 'Lokalizacja wolontariatu'
+vid: lokalizacja_wolontariatu
+description: 'Lokalizacja wolontariatu'
+weight: -8

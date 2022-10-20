@@ -1,0 +1,14 @@
+uuid: 4b69170b-5471-4cff-bb27-159d419355f1
+langcode: pl
+status: true
+dependencies:
+  config:
+    - user.role.adminis
+  module:
+    - user
+id: user_remove_role_action.adminis
+label: 'Odbierz rolę Administrator strony wskazanym użytkownikom'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: adminis

@@ -1,0 +1,29 @@
+uuid: d3f1162d-cca8-4808-8620-4d0af30db50f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lokalizacja_wolontariatu
+    - node.type.oferta_wolontariatu
+    - taxonomy.vocabulary.lokalizacja_wolontariatu
+id: node.oferta_wolontariatu.field_lokalizacja_wolontariatu
+field_name: field_lokalizacja_wolontariatu
+entity_type: node
+bundle: oferta_wolontariatu
+label: 'Lokalizacja wolontariatu'
+description: 'Lokalizacja wolontariatu'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      lokalizacja_wolontariatu: lokalizacja_wolontariatu
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

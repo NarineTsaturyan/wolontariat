@@ -1,0 +1,29 @@
+uuid: 4171b95e-5f8a-4435-9f34-8cb69086c1d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organizacja
+    - node.type.oferta_wolontariatu
+    - node.type.organizacja
+id: node.oferta_wolontariatu.field_organizacja
+field_name: field_organizacja
+entity_type: node
+bundle: oferta_wolontariatu
+label: Organizacja
+description: Organizacja
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organizacja: organizacja
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

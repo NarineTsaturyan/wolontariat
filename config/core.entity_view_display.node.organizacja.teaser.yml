@@ -1,0 +1,56 @@
+uuid: 6e8c9426-562a-4c11-a1e9-20d13a127d86
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.organizacja.body
+    - field.field.node.organizacja.field_kategorie
+    - field.field.node.organizacja.field_logo
+    - field.field.node.organizacja.field_www
+    - image.style.thumbnail
+    - node.type.organizacja
+  module:
+    - image
+    - link
+    - user
+id: node.organizacja.teaser
+targetEntityType: node
+bundle: organizacja
+mode: teaser
+content:
+  field_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_www:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  body: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_kategorie: true
+  langcode: true

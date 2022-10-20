@@ -1,0 +1,29 @@
+uuid: 16461ac3-7b87-47ef-8468-7a26ac33db09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_czestotliwosc_zaangazowani
+    - node.type.oferta_wolontariatu
+    - taxonomy.vocabulary.czestotliwosc_zaangazowania
+id: node.oferta_wolontariatu.field_czestotliwosc_zaangazowani
+field_name: field_czestotliwosc_zaangazowani
+entity_type: node
+bundle: oferta_wolontariatu
+label: 'Częstotliwość zaangażowania'
+description: 'Częstotliwość zaangażowania wolontariatu'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      czestotliwosc_zaangazowania: czestotliwosc_zaangazowania
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

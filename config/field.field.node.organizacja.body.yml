@@ -1,0 +1,23 @@
+uuid: f7d6293c-a518-4c95-b8c7-99de25b84e36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.organizacja
+  module:
+    - text
+id: node.organizacja.body
+field_name: body
+entity_type: node
+bundle: organizacja
+label: Charakterystyka
+description: 'Charakterystyka organizacji'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

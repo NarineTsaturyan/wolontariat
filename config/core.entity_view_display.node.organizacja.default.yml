@@ -1,0 +1,64 @@
+uuid: 862cbd5b-f8c9-46ab-b5e0-6ffeaa710504
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.organizacja.body
+    - field.field.node.organizacja.field_kategorie
+    - field.field.node.organizacja.field_logo
+    - field.field.node.organizacja.field_www
+    - node.type.organizacja
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.organizacja.default
+targetEntityType: node
+bundle: organizacja
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_kategorie:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_www:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: _blank
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  links: true

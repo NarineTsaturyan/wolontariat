@@ -1,0 +1,8 @@
+uuid: a5724161-3ec6-4f98-8d9c-55a3f6d720cc
+langcode: pl
+status: true
+dependencies: {  }
+name: 'Częstotliwość zaangażowania'
+vid: czestotliwosc_zaangazowania
+description: 'Częstotliwość zaangażowania'
+weight: -7

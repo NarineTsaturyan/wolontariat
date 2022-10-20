@@ -1,0 +1,21 @@
+uuid: 6737edd3-8515-4fbd-8553-8f786d9a50e9
+langcode: pl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - admin
+      - main
+    parent: 'admin:'
+_core:
+  default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
+name: Aktualności
+type: article
+description: 'Użyj <em>artykułów</em> dla dynamicznych treści, takich jak newsy, przegląd prasy lub wpisy na blogu.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

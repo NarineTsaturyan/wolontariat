@@ -1,0 +1,8 @@
+uuid: 036c8088-404e-469d-8a0b-31c07a0e8da2
+langcode: pl
+status: true
+dependencies: {  }
+name: 'Typ zadań'
+vid: typ_zadan
+description: 'Typ zadań'
+weight: -9

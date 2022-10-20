@@ -1,0 +1,21 @@
+uuid: e953ee75-9d16-499b-b2ec-66418c0a56aa
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organizacja
+    - node.type.page
+id: node.page.field_organizacja
+field_name: field_organizacja
+entity_type: node
+bundle: page
+label: Organizacja
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

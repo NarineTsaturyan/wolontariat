@@ -1,0 +1,18 @@
+uuid: 405d2fdc-e31a-4799-adae-3cfa992f5dc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Organizacja
+type: organizacja
+description: 'Dodaj nową organizację do bazy organizacji.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

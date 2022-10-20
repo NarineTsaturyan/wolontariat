@@ -1,0 +1,11 @@
+uuid: d26b99a6-df54-4c7c-8072-e2ca2ce9698e
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.typ_zadan
+id: taxonomy_term.typ_zadan
+target_entity_type_id: taxonomy_term
+target_bundle: typ_zadan
+default_langcode: site_default
+language_alterable: false

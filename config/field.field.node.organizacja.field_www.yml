@@ -1,0 +1,23 @@
+uuid: f8cca444-6b5e-410a-8a75-8793f5377eca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_www
+    - node.type.organizacja
+  module:
+    - link
+id: node.organizacja.field_www
+field_name: field_www
+entity_type: node
+bundle: organizacja
+label: Www
+description: 'Strona internetowa organizacji'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

@@ -1,0 +1,20 @@
+uuid: f4b4ca28-ef36-4819-a565-35afe8c60292
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_data_wydarzenia
+field_name: field_data_wydarzenia
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

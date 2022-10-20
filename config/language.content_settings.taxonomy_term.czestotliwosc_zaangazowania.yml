@@ -1,0 +1,11 @@
+uuid: d0c12596-f30f-4ed6-b5d4-d3c7225ff1f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.czestotliwosc_zaangazowania
+id: taxonomy_term.czestotliwosc_zaangazowania
+target_entity_type_id: taxonomy_term
+target_bundle: czestotliwosc_zaangazowania
+default_langcode: site_default
+language_alterable: false

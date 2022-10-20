@@ -1,0 +1,22 @@
+uuid: 557bd337-ecb6-4049-aed5-be279697d793
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.kategorie
+  module:
+    - text
+id: taxonomy_term.kategorie.default
+targetEntityType: taxonomy_term
+bundle: kategorie
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

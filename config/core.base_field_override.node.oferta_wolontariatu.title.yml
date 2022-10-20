@@ -1,0 +1,18 @@
+uuid: baf09c6b-7750-4367-bce4-dd35d3955b7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oferta_wolontariatu
+id: node.oferta_wolontariatu.title
+field_name: title
+entity_type: node
+bundle: oferta_wolontariatu
+label: 'Oferta wolontariatu'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

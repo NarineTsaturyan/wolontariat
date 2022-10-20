@@ -1,0 +1,23 @@
+uuid: 27c99d5a-a0d6-4f40-abfd-16d7e18e08ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.oferta_wolontariatu
+  module:
+    - text
+id: node.oferta_wolontariatu.body
+field_name: body
+entity_type: node
+bundle: oferta_wolontariatu
+label: Opis
+description: 'Opis oferty wolontariatu'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
