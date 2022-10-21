@@ -1,0 +1,22 @@
+uuid: 3eb5ffc3-6648-41d5-9969-b75f4b084ca2
+langcode: pl
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - wolontariat
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: wolontariat_messages
+theme: wolontariat
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Wiadomości statusu'
+  label_display: '0'
+  provider: system
+visibility: {  }

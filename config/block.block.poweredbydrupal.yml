@@ -1,0 +1,20 @@
+uuid: 28f91524-42e5-4654-9099-1f9215f2e238
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - wolontariat
+id: poweredbydrupal
+theme: wolontariat
+region: footer_second
+weight: -8
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

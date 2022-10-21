@@ -1,0 +1,25 @@
+uuid: 44b946bd-3d7f-426c-9196-24c22e21e429
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b679e46f-9b3f-4150-b71b-8e45ac004c42'
+  module:
+    - block_content
+  theme:
+    - wolontariat
+id: kontakt
+theme: wolontariat
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:b679e46f-9b3f-4150-b71b-8e45ac004c42'
+settings:
+  id: 'block_content:b679e46f-9b3f-4150-b71b-8e45ac004c42'
+  label: KONTAKT
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 7c5102d1-ac65-4f71-a05e-f35001ab163f
+langcode: pl
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - wolontariat
+_core:
+  default_config_hash: I6Esh8cDlPdl2POZg4MOSRUrQNYA1UNCJCxL2yqT_wc
+id: wolontariat_powered
+theme: wolontariat
+region: navigation
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Witrynę napędza Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

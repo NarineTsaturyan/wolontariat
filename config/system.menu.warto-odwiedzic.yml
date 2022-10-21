@@ -1,0 +1,8 @@
+uuid: f7ff8225-2eb0-4163-98d4-1db188d6811c
+langcode: en
+status: true
+dependencies: {  }
+id: warto-odwiedzic
+label: 'WARTO ODWIEDZIĆ'
+description: 'Second footer menu'
+locked: false

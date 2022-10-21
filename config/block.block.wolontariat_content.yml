@@ -1,0 +1,22 @@
+uuid: f5d38287-f734-4e78-aa46-9be3ede75018
+langcode: pl
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - wolontariat
+_core:
+  default_config_hash: kigu8pTxXt1qGR2NJ5HHdC4G2G1wsDrIjLPKBT5wUBc
+id: wolontariat_content
+theme: wolontariat
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Zawartość główna'
+  label_display: '0'
+  provider: system
+visibility: {  }

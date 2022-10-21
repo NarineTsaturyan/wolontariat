@@ -1,0 +1,23 @@
+uuid: 4352cbea-e29c-4a06-b153-905a8645cee6
+langcode: pl
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - wolontariat
+_core:
+  default_config_hash: jQ-C8l3dJPqYCGST1e-kSjR14PDP4wq-iFbp8dMFcRo
+id: wolontariat_search
+theme: wolontariat
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Szukaj
+  label_display: visible
+  provider: search
+  page_id: node_search
+visibility: {  }

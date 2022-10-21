@@ -1,0 +1,22 @@
+uuid: 01c6dbe5-7d55-4daa-897b-8116355d2ff0
+langcode: pl
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - wolontariat
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: wolontariat_help
+theme: wolontariat
+region: content
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Pomoc
+  label_display: '0'
+  provider: help
+visibility: {  }

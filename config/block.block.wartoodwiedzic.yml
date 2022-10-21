@@ -1,0 +1,25 @@
+uuid: ec9414a1-d70d-4b1d-a815-cb05af1b123d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.warto-odwiedzic
+  module:
+    - system
+  theme:
+    - wolontariat
+id: wartoodwiedzic
+theme: wolontariat
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:warto-odwiedzic'
+settings:
+  id: 'system_menu_block:warto-odwiedzic'
+  label: 'WARTO ODWIEDZIĆ'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

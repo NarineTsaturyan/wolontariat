@@ -1,0 +1,29 @@
+uuid: f560aac8-fd9a-4c89-b47e-2099cabeb3b7
+langcode: pl
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - wolontariat
+_core:
+  default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
+id: wolontariat_page_title
+theme: wolontariat
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Tytuł strony'
+  label_display: '0'
+  provider: core
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      pl: pl

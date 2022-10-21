@@ -1,0 +1,21 @@
+uuid: 43eb5af1-a89b-48da-9d87-9fa29e6ab94c
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - wolontariat
+id: wolontariat_searchform
+theme: wolontariat
+region: navigation
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

@@ -1,0 +1,30 @@
+uuid: 43d1d344-e011-4d86-8a9c-adf450d81bc2
+langcode: pl
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:c2cf1287-1784-4fdd-ae7e-00b59f2d7f17'
+  module:
+    - block_content
+    - system
+  theme:
+    - wolontariat
+id: wolontariat_testowyblok
+theme: wolontariat
+region: navigation
+weight: -2
+provider: null
+plugin: 'block_content:c2cf1287-1784-4fdd-ae7e-00b59f2d7f17'
+settings:
+  id: 'block_content:c2cf1287-1784-4fdd-ae7e-00b59f2d7f17'
+  label: 'Testowy blok'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

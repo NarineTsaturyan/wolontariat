@@ -1,0 +1,25 @@
+uuid: 704cde1e-7bba-457a-9096-3e269e1c6f7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - copyright_block
+  theme:
+    - wolontariat
+id: copyrightblock
+theme: wolontariat
+region: footer_second
+weight: 0
+provider: null
+plugin: copyright_block
+settings:
+  id: copyright_block
+  label: 'Copyright block'
+  label_display: '0'
+  provider: copyright_block
+  start_year: '2022'
+  separator: '-'
+  text:
+    value: "<p>© 2022 Copyright:&nbsp;Wolontariat SGH |&nbsp;<a href=\"https://wolontariat.sgh.waw.pl/user\">Login</a></p>\r\n"
+    format: basic_html
+visibility: {  }
