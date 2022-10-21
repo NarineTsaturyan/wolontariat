@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAEE,eAFa,CAEb,OAAO,AAAA,cAAc,CAAC;EACpB,OAAO,EAAE,SAAS;EAClB,SAAS,EAAE,QAAQ;CACpB",
+    "sources": [
+        "paragraphs.seven.scss"
+    ],
+    "names": [],
+    "file": "paragraphs.seven.css"
+}

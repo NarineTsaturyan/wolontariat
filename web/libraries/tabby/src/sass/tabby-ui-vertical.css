@@ -1,0 +1,47 @@
+/**
+ * The list element
+ */
+[role="tablist"] {
+  border-bottom: 1px solid lightgray;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[role="tablist"] * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/**
+ * The tabs
+ */
+[role="tab"] {
+  border: 1px solid transparent;
+  border-top-color: lightgray;
+  display: block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  /**
+	 * Active tabs
+	 */
+  /**
+	 * Hovered tabs
+	 */
+}
+
+[role="tab"][aria-selected="true"] {
+  background-color: lightgray;
+}
+
+[role="tab"]:hover:not([aria-selected="true"]) {
+  background-color: #f7f7f7;
+}
+
+/**
+ * [hidden] fallback for IE10 and lower
+ */
+[hidden] {
+  display: none;
+}
+/*# sourceMappingURL=tabby-ui-vertical.css.map */

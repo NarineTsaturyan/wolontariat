@@ -775,13 +775,13 @@ $settings['entity_update_backup'] = TRUE;
  */
 
 $databases['default']['default'] = array (
-  'database' => 'xx',
-  'username' => 'xx',
-  'password' => 'xx',
+  'database' => 'wolontariat',
+  'username' => 'root',
+  'password' => '',
   'prefix' => '',
   'host' => '127.0.0.1',
-  #'port' => '3308',
-  'port' => '3307',
+   #'port' => '3308',
+  'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );

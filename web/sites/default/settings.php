@@ -794,3 +794,16 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+ $databases['default']['default'] = [
+    'database' => 'wolontariat',
+    'username' => 'root',
+    'password' => '',
+    'host' => 'localhost',
+    'port' => '3306',
+    'driver' => 'mysql',
+    'prefix' => '',
+    'collation' => 'utf8mb4_general_ci',
+   ];
+$settings['hash_salt']  = "aaaa";
+$config_directories['sync'] = '../config';
+$settings['config_sync_directory'] = '../config';

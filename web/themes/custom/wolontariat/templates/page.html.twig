@@ -65,6 +65,7 @@
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
       {% if not navbar_attributes.hasClass(container) %}
         <div class="container-fluid">
+        <div class="container">
       {% endif %}
       <div class="navbar-header">
         {{ page.navigation }}
@@ -87,10 +88,20 @@
       {% endif %}
       {% if not navbar_attributes.hasClass(container) %}
         </div>
+        </div>
       {% endif %}
     </header>
   {% endblock %}
 {% endif %}
+
+
+{% if page.banner %}
+  {% block banner %}
+      {{ page.banner }}
+  {% endblock %}
+{% endif %}
+
+
 
 {# Main #}
 {% block main %}
@@ -162,7 +173,14 @@
 {% if page.footer %}
   {% block footer %}
     <footer class="footer container-fluid" role="contentinfo">
+    <div class='container'>
       {{ page.footer }}
+    </div>
+    </footer>
+    <footer class="footer-second container-fluid" role="contentinfo">
+    <div class='container'>
+      {{ page.footer_second }}
+    </div>
     </footer>
   {% endblock %}
 {% endif %}
