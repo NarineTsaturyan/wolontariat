@@ -1,0 +1,11 @@
+uuid: fb94c706-14d4-4173-a79f-623017ea63e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.centrum_wolontariatu_sgh
+id: block_content.centrum_wolontariatu_sgh
+target_entity_type_id: block_content
+target_bundle: centrum_wolontariatu_sgh
+default_langcode: site_default
+language_alterable: false

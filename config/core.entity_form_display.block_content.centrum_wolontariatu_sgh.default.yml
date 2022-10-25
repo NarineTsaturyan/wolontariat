@@ -1,0 +1,49 @@
+uuid: 30b9f1a7-fb25-4a73-91a3-bbe6824ae98f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.centrum_wolontariatu_sgh
+    - field.field.block_content.centrum_wolontariatu_sgh.field_image
+    - field.field.block_content.centrum_wolontariatu_sgh.field_link
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+id: block_content.centrum_wolontariatu_sgh.default
+targetEntityType: block_content
+bundle: centrum_wolontariatu_sgh
+mode: default
+content:
+  field_image:
+    type: image_image
+    weight: 27
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 28
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

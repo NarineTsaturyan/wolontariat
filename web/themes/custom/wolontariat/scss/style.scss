@@ -1,5 +1,8 @@
 a{
   color: #007481;
+}  
+input[type=checkbox] {
+  margin: 4px 4px 0 ;
 }
 .path-frontpage {
   font-family: "Open-Sans", sans-serif;
@@ -35,13 +38,18 @@ a{
 
               #block-wolontariat-main-menu {
                 .navbar-nav{
-                  margin-right: 14rem;
                 li {
                   a {
                   color: #000;
                   text-transform: uppercase;
                   padding: 35px 25px 25px;
                   font-size: 14px;
+                  &:active {
+                    background-color: transparent;
+                  }
+                }
+                &:hover {
+                  background-color: #e7e7e7;
                 }
               }
             }
@@ -55,9 +63,9 @@ a{
                   .form-item {
                     .input-group {
                       .form-search {
-                        width: 250px;
+                        width: 144px;
                         border-radius: 0;
-                        display: none;
+                        visibility: hidden;
                       }
 
                       .input-group-btn {
@@ -96,6 +104,50 @@ a{
     }
     .main-container {
       margin-bottom: 50px;
+      .region-content {
+        display: flex;
+        justify-content: space-between;
+        @media(max-width:998px) {
+          display: block;
+        }
+        .page-header {
+          display: none;
+        }
+        section {
+          width: 30%;
+          @media(max-width:998px) {
+            width: 100%;
+            margin-bottom: 25px;
+          }
+          .field--name-field-link {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12), 1px 2px 3px rgba(0, 0, 0, 0.24);
+            position: absolute;
+            text-align: center;
+            bottom: 0px;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            padding: 25px 0;
+            a {
+              color: #fff;
+              font-size: 20px;
+              transition: 0.5s all;
+              &:hover {
+                text-decoration: none;
+              }
+
+            }
+          }
+          .field--name-field-image {
+            img {
+              height: 300px;
+              object-fit: cover;
+            }
+          }
+        }
+        .views-element-container{
+          display: none;
+        }
+      }
     }
     .footer {
       font-size: 13px;
@@ -106,6 +158,9 @@ a{
       .container {
         .region-footer {
           display: flex;
+          @media(max-width:768px) {
+            display: block;
+          }
           section {
             width: 33.3%;
             h2 {
@@ -128,6 +183,9 @@ a{
             ul > li > a {
               color: #fff;
               padding: 0 15px;
+              @media(max-width:768px) {
+                padding: 0;
+              }
               &:hover {
                 text-decoration: underline;
                 background-color: transparent;
@@ -201,16 +259,26 @@ body {
 
               #block-wolontariat-main-menu {
                 .navbar-nav{
-                  margin-right: 14rem;
                 li {
                   a {
                   color: #000;
                   text-transform: uppercase;
                   padding: 35px 25px 25px;
                   font-size: 14px;
+                  @media(max-width:1200px) {
+                    padding: 15px;
+                  } 
                 }
+                &:hover {
+                  background-color: #e7e7e7;
+                }
+                
+              }
+              .active a{
+                background-color: transparent;
               }
             }
+            
           }
 
               .search-block-form {
@@ -221,9 +289,9 @@ body {
                   .form-item {
                     .input-group {
                       .form-search {
-                        width: 250px;
+                        width: 144px;
                         border-radius: 0;
-                        display: none;
+                        visibility: hidden;
                       }
 
                       .input-group-btn {
@@ -254,6 +322,53 @@ body {
                 .view-header {
                   margin: 2em 9em 3em 8em;
                   font-size: 16px;
+                  @media(max-width:750px) {
+                    margin: 2em 0em 3em 0em;  
+                  }
+                }
+                .view-content {
+                  .views-row {
+                    article {
+                      display: inline-block;
+                      width: 100%;
+                      margin-bottom: 2em;
+                      border-bottom: 1px dashed #ccc;
+                      padding-bottom: 1em;
+                      h2 {
+                        font-size: 24px;
+                        margin: 10px 0; 
+                        color: #333333;
+                      }
+                      .content {
+                        .field--name-field-www {
+                          margin-top: 10px;
+                        }
+                        .field--name-field-logo {
+                          float: left;
+                          margin-right: 2em;
+                          min-height: 100px;
+                          min-width: 100px;
+                        }
+                        .list-inline {
+                          li {
+                            padding: 7px 30px;
+                            font-size: 13px;
+                            border-radius: 3px;
+                            text-transform: uppercase;
+                            background: transparent;
+                            color: #007481;
+                            white-space: nowrap;
+                            text-align: center;
+                            line-height: 24px;
+                            letter-spacing: 0.5px;
+                            border: 2px solid #007481;
+                            float: right;
+                          }
+                        }
+                      }
+                    }
+                    }
+                  }
                 }
               }
               .view-id-aktualnosci {
@@ -289,13 +404,138 @@ body {
                   }
                 }
               }
+              .view-id-glossary {
+                .attachment-before {
+                  margin: 2em 9em 3em 8em;
+                  font-size: 16px;
+                }
+                .view-content {
+                  .views-row {
+                    article {
+                      display: inline-block;
+                      width: 100%;
+                      margin-bottom: 2em;
+                      border-bottom: 1px dashed #ccc;
+                      padding-bottom: 1em;
+                      h2 {
+                        font-size: 24px;
+                        margin: 10px 0; 
+                        color: #333333;
+                      }
+                      .content {
+                        .field--name-field-www {
+                          margin-top: 10px;
+                        }
+                        .field--name-field-logo {
+                          float: left;
+                          margin-right: 2em;
+                          min-height: 100px;
+                          min-width: 100px;
+                        }
+                        .list-inline {
+                          li {
+                            padding: 7px 30px;
+                            font-size: 13px;
+                            border-radius: 3px;
+                            text-transform: uppercase;
+                            background: transparent;
+                            color: #007481;
+                            white-space: nowrap;
+                            text-align: center;
+                            line-height: 24px;
+                            letter-spacing: 0.5px;
+                            border: 2px solid #007481;
+                            float: right;
+                          }
+                        }
+                      }
+                    }
+                    }
+                  }
+              }
+              .view-id-znajdz_wolontariat {
+                display: flex;
+                .view-filters {
+                  margin: 0 30px 0px 0;
+                  form {
+                    .form--inline {
+                      width: 240px;
+                      padding: 19px;
+                      background-color: #f5f5f5;
+                      border: 1px solid #e3e3e3;
+                      box-shadow: inset 0 0px 1px rgba(0, 0, 0, 0.5);
+                      .form-type-textfield {
+                        input {
+                          margin-top: 5px;
+                          width: 200px;
+                        }
+                      }
+                      fieldset {
+                        .fieldset-wrapper {
+                          .form-checkboxes {
+                            padding: 0.5em 1em 1em 0;
+                            .bef-checkboxes {
+                              .form-item {
+                                display: block;
+                                margin-bottom: 5px;
+                              }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .view-content {
+                .views-row {
+                  .views-field-rendered-entity {
+                    .field-content {
+                      article {
+                        margin: 2em;
+                        padding-bottom: 1em;
+                        border-bottom: 1px dashed #ccc;
+                        h2 {
+                          font-size: 24px;
+                          a {
+                            color: #333333;
+                          }
+                        }
+                        .content {
+                          .field--name-body {
+                            margin-bottom: 4em;
+                          }
+                          ul{
+                            .node-readmore {
+                              float: right;
+                              padding: 7px 30px;
+                              font-size: 13px;
+                              border-radius: 3px;
+                              text-transform: uppercase;
+                              background: transparent;
+                              color: #007481;
+                              white-space: nowrap;
+                              text-align: center;
+                              line-height: 24px;
+                              letter-spacing: 0.5px;
+                              border: 2px solid #007481;
+                          }
+                        }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .pager-nav {
+                position: absolute;
+                bottom: -62px;
+                left: 50%;
+              }
+              }
             }
           }
         }
       }
-    }
-
-
     .footer {
       font-size: 13px;
       line-height: 2.3;
@@ -305,6 +545,9 @@ body {
       .container {
         .region-footer {
           display: flex;
+          @media(max-width:768px) {
+            display: block;
+          }
           section {
             width: 33.3%;
             h2 {
@@ -327,6 +570,9 @@ body {
             ul > li > a {
               color: #fff;
               padding: 0 15px;
+              @media(max-width:768px) {
+                padding: 0;
+              }
               &:hover {
                 text-decoration: underline;
                 background-color: transparent;

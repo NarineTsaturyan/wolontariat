@@ -1,0 +1,30 @@
+uuid: 111c2f32-7f32-4b04-8df3-544105634a8e
+langcode: pl
+status: true
+dependencies:
+  content:
+    - 'block_content:centrum_wolontariatu_sgh:4bdbe136-b812-4a4a-8177-43d21ed25dc8'
+  module:
+    - block_content
+    - system
+  theme:
+    - wolontariat
+id: first
+theme: wolontariat
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:4bdbe136-b812-4a4a-8177-43d21ed25dc8'
+settings:
+  id: 'block_content:4bdbe136-b812-4a4a-8177-43d21ed25dc8'
+  label: First
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

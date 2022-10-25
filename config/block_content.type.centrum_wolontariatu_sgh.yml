@@ -1,0 +1,8 @@
+uuid: 2b20a817-ec68-4b2a-88ba-847665b01fe9
+langcode: en
+status: true
+dependencies: {  }
+id: centrum_wolontariatu_sgh
+label: 'Front page block'
+revision: 0
+description: 'Block for main page'

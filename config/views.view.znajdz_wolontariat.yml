@@ -687,8 +687,6 @@ display:
         - 'config:core.entity_view_display.node.organizacja.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
-        - 'config:core.entity_view_display.node.strona_glowna.default'
-        - 'config:core.entity_view_display.node.strona_glowna.teaser'
         - 'config:field.storage.node.body'
   page_1:
     id: page_1
@@ -703,7 +701,7 @@ display:
         title: 'ZNAJDŹ WOLONTARIAT'
         description: ''
         weight: 35
-        enabled: true
+        enabled: false
         expanded: false
         menu_name: main
         parent: ''
@@ -730,6 +728,4 @@ display:
         - 'config:core.entity_view_display.node.organizacja.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
-        - 'config:core.entity_view_display.node.strona_glowna.default'
-        - 'config:core.entity_view_display.node.strona_glowna.teaser'
         - 'config:field.storage.node.body'

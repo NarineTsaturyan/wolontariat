@@ -1,0 +1,30 @@
+uuid: caf2f704-1a28-4d4e-a7bc-ecb0c2566c21
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:centrum_wolontariatu_sgh:aed9c877-947b-48a2-938e-f914bc080c6c'
+  module:
+    - block_content
+    - system
+  theme:
+    - wolontariat
+id: '3'
+theme: wolontariat
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:aed9c877-947b-48a2-938e-f914bc080c6c'
+settings:
+  id: 'block_content:aed9c877-947b-48a2-938e-f914bc080c6c'
+  label: '3'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

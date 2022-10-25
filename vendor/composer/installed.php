@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b0671d8429fa443dddbb2eaa6c32f15dc89d62bb',
+        'reference' => '1ef002288858592aeb013a48d786b32beb9f24ad',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -1318,6 +1318,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/page_title_visibility' => array(
+            'pretty_version' => '1.4.0',
+            'version' => '1.4.0.0',
+            'reference' => '8.x-1.4',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/page_title_visibility',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/panelbutton' => array(
             'pretty_version' => '1.5.0',
             'version' => '1.5.0.0',
@@ -1393,7 +1402,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b0671d8429fa443dddbb2eaa6c32f15dc89d62bb',
+            'reference' => '1ef002288858592aeb013a48d786b32beb9f24ad',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

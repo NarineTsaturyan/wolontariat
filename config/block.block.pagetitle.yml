@@ -1,0 +1,18 @@
+uuid: 541a3eae-6702-4fc2-ab8f-117e2fff7a3e
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wolontariat
+id: pagetitle
+theme: wolontariat
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: visible
+  provider: core
+visibility: {  }
