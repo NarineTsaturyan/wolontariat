@@ -75,12 +75,13 @@ input[type=checkbox] {
   display: none;
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   min-height: auto;
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content .page-header {
   text-align: center;
   padding-bottom: 15px;
+  margin: 0px 0 20px !important;
   border-bottom: 4px solid #000;
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content article {

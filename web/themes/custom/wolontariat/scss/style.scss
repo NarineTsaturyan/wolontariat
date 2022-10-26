@@ -111,12 +111,13 @@ input[type=checkbox] {
       }
     }
     .main-container {
-      margin-bottom: 50px;
+      margin-bottom: 0px;
       min-height: auto;
       .region-content {
         .page-header {
           text-align: center;
           padding-bottom: 15px;
+          margin: 0px 0 20px !important;
           border-bottom: 4px solid #000;
         }
         article {
