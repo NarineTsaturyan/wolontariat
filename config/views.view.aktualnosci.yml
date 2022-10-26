@@ -206,9 +206,10 @@ display:
       path: aktualnosci
       menu:
         type: normal
-        title: AKTUALNOŚCI
+        title: Aktualności
         description: ''
         weight: 20
+        enabled: true
         expanded: false
         menu_name: main
         parent: ''

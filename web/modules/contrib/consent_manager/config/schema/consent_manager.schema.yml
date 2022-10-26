@@ -7,9 +7,15 @@ consent_manager.settings:
     blocking_mode:
       type: string
       label: 'Blocking mode'
-    cmp_id:
-      type: integer
-      label: 'Id'
+    cdid:
+      type: string
+      label: 'Code-ID'
+    host:
+      type: string
+      label: 'Host'
+    cdn:
+      type: string
+      label: 'CDN'
     custom_code:
       type: string
       label: 'Custom HTML code'

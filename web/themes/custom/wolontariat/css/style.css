@@ -20,6 +20,12 @@ input[type=checkbox] {
   background: rgba(255, 255, 255, 0.85);
   position: absolute;
 }
+@media (max-width: 1200px) {
+  .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container {
+    margin: 0;
+    width: 100%;
+  }
+}
 .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation {
   align-items: center;
   display: flex;
@@ -37,6 +43,11 @@ input[type=checkbox] {
   text-transform: uppercase;
   padding: 35px 25px 25px;
   font-size: 14px;
+}
+@media (max-width: 1200px) {
+  .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav li a {
+    padding: 15px;
+  }
 }
 .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav li a:active {
   background-color: transparent;
@@ -65,21 +76,20 @@ input[type=checkbox] {
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container {
   margin-bottom: 50px;
-}
-.path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content {
-  display: flex;
-  justify-content: space-between;
-}
-@media (max-width: 998px) {
-  .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content {
-    display: block;
-  }
+  min-height: auto;
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content .page-header {
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #000;
+}
+.path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content article {
   display: none;
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section {
   width: 30%;
+  float: left;
+  margin-left: 25px;
 }
 @media (max-width: 998px) {
   .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section {
@@ -89,9 +99,9 @@ input[type=checkbox] {
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-link {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12), 1px 2px 3px rgba(0, 0, 0, 0.24);
-  position: absolute;
+  position: relative;
   text-align: center;
-  bottom: 0px;
+  bottom: 77px;
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
   padding: 25px 0;
@@ -108,6 +118,14 @@ input[type=checkbox] {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 1000px) {
+  .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-image img {
+    height: auto;
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content .views-element-container {
   display: none;
@@ -135,6 +153,14 @@ input[type=checkbox] {
   text-transform: uppercase;
   margin-bottom: 40px;
 }
+.path-frontpage .dialog-off-canvas-main-canvas .footer .container .region-footer section h2::after {
+  content: "";
+  width: 60px;
+  display: block;
+  background: white;
+  margin-top: 10px;
+  height: 1px;
+}
 .path-frontpage .dialog-off-canvas-main-canvas .footer .container .region-footer section .field--type-text-with-summary p {
   margin: 0;
 }
@@ -142,6 +168,14 @@ input[type=checkbox] {
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 40px;
+}
+.path-frontpage .dialog-off-canvas-main-canvas .footer .container .region-footer nav h2::after {
+  content: "";
+  width: 60px;
+  display: block;
+  background: white;
+  margin-top: 10px;
+  height: 1px;
 }
 .path-frontpage .dialog-off-canvas-main-canvas .footer .container .region-footer nav ul > li > a {
   color: #fff;
@@ -231,7 +265,8 @@ body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-h
   background-color: #007481;
 }
 body .dialog-off-canvas-main-canvas .main-container {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  min-height: 636px;
 }
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .page-header {
   margin: 40px 0 20px;
@@ -254,11 +289,17 @@ body .dialog-off-canvas-main-canvas .main-container .row section .region-content
 }
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .views-element-container .view-lista-organizacji .view-content .views-row article h2 {
   font-size: 24px;
-  margin: 10px 0;
+  margin: 15px 0;
+  margin-left: 130px;
+  position: absolute;
+}
+body .dialog-off-canvas-main-canvas .main-container .row section .region-content .views-element-container .view-lista-organizacji .view-content .views-row article h2 a {
   color: #333333;
 }
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .views-element-container .view-lista-organizacji .view-content .views-row article .content .field--name-field-www {
-  margin-top: 10px;
+  margin-top: 50px;
+  position: absolute;
+  margin-left: 130px;
 }
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .views-element-container .view-lista-organizacji .view-content .views-row article .content .field--name-field-logo {
   float: left;
@@ -270,6 +311,7 @@ body .dialog-off-canvas-main-canvas .main-container .row section .region-content
   padding: 7px 30px;
   font-size: 13px;
   border-radius: 3px;
+  margin-top: 75px;
   text-transform: uppercase;
   background: transparent;
   color: #007481;
@@ -345,6 +387,11 @@ body .dialog-off-canvas-main-canvas .main-container .row section .region-content
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat {
   display: flex;
 }
+@media (max-width: 800px) {
+  body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat {
+    display: block;
+  }
+}
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-filters {
   margin: 0 30px 0px 0;
 }
@@ -355,9 +402,28 @@ body .dialog-off-canvas-main-canvas .main-container .row section .region-content
   border: 1px solid #e3e3e3;
   box-shadow: inset 0 0px 1px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 800px) {
+  body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-filters form .form--inline {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-filters form .form--inline .form-item {
+    float: none;
+    width: 100%;
+  }
+  body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-filters form .form--inline .form-item .control-label {
+    display: block;
+  }
+}
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-filters form .form--inline .form-type-textfield input {
   margin-top: 5px;
   width: 200px;
+}
+@media (max-width: 800px) {
+  body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-filters form .form--inline .form-type-textfield input {
+    width: 100%;
+  }
 }
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-filters form .form--inline fieldset .fieldset-wrapper .form-checkboxes {
   padding: 0.5em 1em 1em 0;
@@ -365,6 +431,10 @@ body .dialog-off-canvas-main-canvas .main-container .row section .region-content
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-filters form .form--inline fieldset .fieldset-wrapper .form-checkboxes .bef-checkboxes .form-item {
   display: block;
   margin-bottom: 5px;
+}
+body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-filters form .form--inline fieldset legend {
+  margin-bottom: 0px;
+  border-bottom: 0;
 }
 body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .view-content .views-row .views-field-rendered-entity .field-content article {
   margin: 2em;
@@ -399,6 +469,31 @@ body .dialog-off-canvas-main-canvas .main-container .row section .region-content
   bottom: -62px;
   left: 50%;
 }
+@media (max-width: 800px) {
+  body .dialog-off-canvas-main-canvas .main-container .row section .region-content .view-id-znajdz_wolontariat .pager-nav {
+    position: unset;
+    bottom: unset;
+    left: unset;
+    margin: 0 auto;
+  }
+}
+body .dialog-off-canvas-main-canvas .main-container .row section .region-content .oferta-wolontariatu .content .field {
+  margin-bottom: 1em;
+}
+body .dialog-off-canvas-main-canvas .main-container .row section .region-content .oferta-wolontariatu .content .field--name-field-data-wydarzenia {
+  font-size: 24px;
+}
+body .dialog-off-canvas-main-canvas .main-container .row section .region-content .oferta-wolontariatu .content .field--name-field-data-wydarzenia .field--label {
+  font-weight: normal;
+}
+body .dialog-off-canvas-main-canvas .main-container .row section .region-content .oferta-wolontariatu .content .field--name-field-data-wydarzenia .field--items {
+  display: flex;
+  justify-content: space-between;
+  width: 46%;
+}
+body .dialog-off-canvas-main-canvas .main-container .row section .region-content .oferta-wolontariatu .content .field--type-entity-reference {
+  display: flex;
+}
 body .dialog-off-canvas-main-canvas .footer {
   font-size: 13px;
   line-height: 2.3;
@@ -422,6 +517,14 @@ body .dialog-off-canvas-main-canvas .footer .container .region-footer section h2
   text-transform: uppercase;
   margin-bottom: 40px;
 }
+body .dialog-off-canvas-main-canvas .footer .container .region-footer section h2::after {
+  content: "";
+  width: 60px;
+  display: block;
+  background: white;
+  margin-top: 10px;
+  height: 1px;
+}
 body .dialog-off-canvas-main-canvas .footer .container .region-footer section .field--type-text-with-summary p {
   margin: 0;
 }
@@ -429,6 +532,14 @@ body .dialog-off-canvas-main-canvas .footer .container .region-footer nav h2 {
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 40px;
+}
+body .dialog-off-canvas-main-canvas .footer .container .region-footer nav h2::after {
+  content: "";
+  width: 60px;
+  display: block;
+  background: white;
+  margin-top: 10px;
+  height: 1px;
 }
 body .dialog-off-canvas-main-canvas .footer .container .region-footer nav ul > li > a {
   color: #fff;

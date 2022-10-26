@@ -7,6 +7,6 @@
     "minimum-stability": "dev",
     "support": {
         "issues": "https://www.drupal.org/project/issues/consent_manager",
-        "source": "http://cgit.drupalcode.org/consent_manager",
+        "source": "http://cgit.drupalcode.org/consent_manager"
     }
 }

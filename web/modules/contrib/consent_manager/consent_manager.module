@@ -36,18 +36,18 @@ function consent_manager_page_attachments(array &$attachments) {
   $admin_context = \Drupal::service('router.admin_context');
   $route_match = \Drupal::routeMatch();
   // Skip for admin routes.
-  if ($admin_context->isAdminRoute($route_match->getRouteObject())) {
-    return;
-  }
-  /** @var \Drupal\consent_manager\CodeManager $code_manager */
-  $code_manager = \Drupal::service('consent_manager.code_manager');
-  if ($code = $code_manager->getCode()) {
-    $attachments['#attached']['html_head'][] = [
-      [
-        '#type' => 'markup',
-        '#markup' => $code,
-      ],
-      'consent_manager',
-    ];
+  if (!$admin_context->isAdminRoute($route_match->getRouteObject())) {
+    /** @var \Drupal\consent_manager\CodeManager $code_manager */
+    $code_manager = \Drupal::service('consent_manager.code_manager');
+    if ($code = $code_manager->getCode()) {
+      $attachments['#attached']['html_head'][] = [
+        [
+          '#type' => 'markup',
+          '#markup' => $code,
+        ],
+        'consent_manager',
+      ];
+      $attachments['#cache']['tags'][] = 'consent_manager';
+    }
   }
 }

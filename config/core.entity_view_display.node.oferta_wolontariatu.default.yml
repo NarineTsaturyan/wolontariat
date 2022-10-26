@@ -14,6 +14,7 @@ dependencies:
     - node.type.oferta_wolontariatu
   module:
     - datetime
+    - ds
     - entity_print
     - file
     - text
@@ -52,7 +53,9 @@ content:
     settings:
       timezone_override: Europe/Warsaw
       format_type: medium
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ds_limit: ''
     weight: 1
     region: content
   field_kategorie:

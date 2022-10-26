@@ -14,7 +14,17 @@ class LoadTest extends BrowserTestBase {
   /**
    * Test CMP ID value.
    */
-  const CPM_ID = 1234567;
+  const CDID = 'aaaaaaaaaaaa';
+
+  /**
+   * Test HOST value.
+   */
+  const HOST = 'cdn.consentmanager.net';
+
+  /**
+   * Test CDN value.
+   */
+  const CDN = 'delivery.consentmanager.net';
 
   /**
    * {@inheritdoc}
@@ -44,14 +54,17 @@ class LoadTest extends BrowserTestBase {
    */
   public function testAutomaticCode() {
     $this->config('consent_manager.settings')
-      ->set('cmp_id', self::CPM_ID)
+      ->set('cdid', self::CDID)
+      ->set('host', self::HOST)
+      ->set('cdn', self::CDN)
       ->set('blocking_mode', 'automatic')
       ->set('custom_code', '<meta name="ConsentManager" content="custom_code" />')
       ->save();
     $this->drupalGet('<front>');
     $this->assertSession()->statusCodeEquals(200);
-    $xpath = $this->xpath('//head/script[@data-cmp-id="' . self::CPM_ID . '"]');
-    self::assertNotEmpty($xpath, 'Consent Manager script element not found.');
+    $this->assertSession()->responseContains('https://' . self::CDN . '/delivery/autoblocking/' . self::CDID . '.js');
+    $this->assertSession()->responseContains('data-cmp-host="' . self::HOST . '"');
+    $this->assertSession()->responseContains('data-cmp-cdn="' . self::CDN . '"');
     $xpath = $this->xpath('//head/meta[@name="ConsentManager"]');
     self::assertNotEmpty($xpath, 'Consent Manager custom code markup not found.');
   }
@@ -64,13 +77,17 @@ class LoadTest extends BrowserTestBase {
    */
   public function testSemiAutomaticCode() {
     $this->config('consent_manager.settings')
-      ->set('cmp_id', self::CPM_ID)
+      ->set('cdid', self::CDID)
+      ->set('host', self::HOST)
+      ->set('cdn', self::CDN)
       ->set('blocking_mode', 'semi_automatic')
       ->set('custom_code', '<meta name="ConsentManager" content="custom_code" />')
       ->save();
     $this->drupalGet('<front>');
     $this->assertSession()->statusCodeEquals(200);
-    $this->assertSession()->responseContains('window.cmp_id=' . self::CPM_ID);
+    $this->assertSession()->responseContains('window.cdid=' . self::CDID);
+    $this->assertSession()->responseContains('window.cmp_host=' . self::HOST);
+    $this->assertSession()->responseContains('window.cmp_cdn=' . self::CDN);
     $xpath = $this->xpath('//head/meta[@name="ConsentManager"]');
     self::assertNotEmpty($xpath, 'Consent Manager custom code markup not found.');
   }
