@@ -1,0 +1,7 @@
+page_title_visibility.content_type.*:
+  type: config_entity
+  label: 'Whether to default page title on or off'
+  mapping:
+    display_page_title:
+      type: boolean
+      label: 'Whether to default page title on or off'

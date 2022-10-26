@@ -1,0 +1,212 @@
+<?php
+
+/**
+ * @file
+ * Contains page_title_visibility.module.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\NodeInterface;
+
+// Defining constants.
+const PAGE_DISPLAY_VISIBILITY_PERMISSION = 'administer page display visibility config';
+const PAGE_TITLE_HIDDEN_DESCRIPTION = 'Your account does not have permission to set the page title visibility.';
+
+/**
+ * Implements hook_help().
+ */
+function page_title_visibility_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the page_title_visibility module.
+    case 'help.page.page_title_visibility':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Regulate whether page title displays on a per-node basis. This provides a new checkbox on each node form to "Display page title" which, when unchecked, will suppress the display of page title only on that node. This assumes that the content type is set to display a page title in admin/structure/block/manage/page_title.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function page_title_visibility_preprocess_block(&$variables, $hook) {
+  // Visually hide the page title if the configuration has been set to hidden.
+  $plugin_id = $variables['plugin_id'] ?? '';
+  if ($plugin_id === 'page_title_block') {
+    // This will not affect non node routes (e.g., views, taxonomy, etc.)
+    // Check first if we can retrieve the node revision.
+    $node = \Drupal::routeMatch()->getParameter('node_revision');
+    if (is_string($node)) {
+      // This conditional will be unnecessary after
+      // https://www.drupal.org/project/drupal/issues/2730631 .
+      $node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($node);
+    }
+    if (!$node instanceof NodeInterface) {
+      $node = \Drupal::routeMatch()->getParameter('node');
+    }
+    if ($node instanceof NodeInterface) {
+      if ($display_page_title = $node->get('display_page_title')) {
+        $display_page_title = $display_page_title->value;
+        $hide = FALSE;
+        // If node level display value is either NULL or 0 we determine below.
+        if (!$display_page_title) {
+          // If node level display value is 0, make hide = true.
+          if ($display_page_title === "0") {
+            $hide = TRUE;
+          }
+          else {
+            // Node level display value is NULL, get value from content type.
+            $config = \Drupal::config('page_title_visibility.content_type.' . $node->bundle());
+            // If content type level display value is set to FALSE, hide = true.
+            if ($config->get('display_page_title') === FALSE) {
+              $hide = TRUE;
+            }
+          }
+        }
+        // If hide = TRUE, add CSS class to hide Page Title from node.
+        if ($hide) {
+          $variables['attributes']['class'][] = 'visually-hidden';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function page_title_visibility_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+  if ($entity_type->id() === 'node') {
+    $fields['display_page_title'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(t('Display page title'))
+      ->setRevisionable(TRUE)
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('view', [
+        'region' => 'hidden',
+      ])
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('form', [
+        'type' => 'boolean_checkbox',
+        'weight' => 10,
+      ])
+      ->setDefaultValue(TRUE)
+      ->setDisplayConfigurable('form', TRUE);
+  }
+  return $fields;
+}
+
+/**
+ * Implements hook_form_BASE_ID_alter().
+ *
+ * Display the display page title filed on the node edit form.
+ *
+ * @note: This won't work where you have Display Suite/REL enabled.
+ */
+function page_title_visibility_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  if (isset($form['display_page_title'])) {
+    // Add V-Tab fieldset for Page Display Options.
+    $form['page_display_options'] = [
+      '#type' => 'details',
+      '#title' => t('Page display options'),
+      '#group' => 'advanced',
+      '#attributes' => [
+        'class' => ['node-form-page_display_options'],
+      ],
+      '#attached' => [
+        'library' => ['node/drupal.node'],
+      ],
+      '#weight' => 100,
+      '#optional' => TRUE,
+    ];
+    $account = \Drupal::currentUser();
+    $element_status = ($account->hasPermission(PAGE_DISPLAY_VISIBILITY_PERMISSION)) ? FALSE : TRUE;
+    $form['display_page_title']['widget']['#disabled'] = $element_status;
+    // Update description if user has no permission to change the field value.
+    if ($element_status) {
+      $form['display_page_title']['widget']['value']['#description'] = page_title_visibility_update_description($form['display_page_title']['widget']['value']['#description']);
+    }
+    $form['display_page_title']['#group'] = 'page_display_options';
+    $node = $form_state->getFormObject()->getEntity();
+    // If new node OR legacy node AND not a cloned node.
+    if (($node->isNew() || empty($node->get('display_page_title')->getValue())) && !isset($node->cloned_node)) {
+      $default_display = \Drupal::config('page_title_visibility.content_type.' . $node->bundle())->get('display_page_title');
+      if ($default_display !== NULL) {
+        $form['display_page_title']['widget']['value']['#default_value'] = $default_display;
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * Add a default page title display checkbox to content type edit form.
+ */
+function page_title_visibility_form_node_type_edit_form_alter(&$form, FormStateInterface $form_state) {
+  $node_type = $form_state->getBuildInfo()['callback_object']->getEntity();
+  $config = \Drupal::config('page_title_visibility.content_type.' . $node_type->id());
+  $display_page_title = 1;
+  if ($config->get('display_page_title') !== NULL) {
+    $display_page_title = $config->get('display_page_title');
+  }
+  if (!isset($form['page_display_options'])) {
+    $form['page_display_options'] = [
+      '#type' => 'details',
+      '#title' => 'Page display defaults',
+      '#group' => 'additional_settings',
+    ];
+  }
+  $account = \Drupal::currentUser();
+  $element_status = ($account->hasPermission(PAGE_DISPLAY_VISIBILITY_PERMISSION)) ? FALSE : TRUE;
+  $form['page_display_options']['display_page_title'] = [
+    '#type' => 'checkbox',
+    '#disabled' => $element_status,
+    '#title' => 'Default to "Display page title" on.',
+    '#default_value' => $display_page_title,
+    '#description' => t('This value can be overridden on a per-node basis.'),
+  ];
+  // Update description if user has no permission to change the field value.
+  if ($element_status) {
+    $form['page_display_options']['display_page_title']['#description'] = page_title_visibility_update_description($form['page_display_options']['display_page_title']['#description']);
+  }
+  $form['actions']['submit']['#submit'][] = 'page_title_visibility_node_type_edit_form_submit';
+}
+
+/**
+ * Submit handler for node type forms.
+ */
+function page_title_visibility_node_type_edit_form_submit($form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+  $node_type = $form_state->getBuildInfo()['callback_object']->getEntity();
+  $config = \Drupal::service('config.factory')->getEditable('page_title_visibility.content_type.' . $node_type->id());
+  if (isset($values['display_page_title'])) {
+    $config->set('display_page_title', $values['display_page_title']);
+    $config->save();
+  }
+}
+
+/**
+ * Implements hook_clone_node_alter().
+ *
+ *  Matches display_page_title from original node during node_clone operation.
+ *
+ * @see clone.api.php
+ */
+function page_title_visibility_clone_node_alter(&$node, $context) {
+  $node->cloned_node = TRUE;
+}
+
+/**
+ * Helper function to update description when user has no permission to edit.
+ */
+function page_title_visibility_update_description($form_item) {
+  $form_item = PAGE_TITLE_HIDDEN_DESCRIPTION;
+  return $form_item;
+}

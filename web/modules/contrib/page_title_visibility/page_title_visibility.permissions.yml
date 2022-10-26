@@ -1,0 +1,4 @@
+administer page display visibility config:
+  title: 'Configure node title visibility'
+  description: 'Configure node title visibility on a per content type or per node basis.'
+  restrict access: true
