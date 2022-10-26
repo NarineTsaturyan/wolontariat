@@ -1,7 +1,15 @@
 framework:
+  js:
+    js/site.js: {}
   css:
     theme:
       css/style.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - jquery_ui/core
+    - jquery_ui_effects/slide
 
 # Uncomment for LESS source JavaScript files.
 #  js:

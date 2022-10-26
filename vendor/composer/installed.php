@@ -3,7 +3,7 @@
         'name' => 'drupal/recommended-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '8056bf2323bf437ceda4077b1fdece75d964fb81',
+        'reference' => 'f326d447e9d1e88147d0d5eb5b525648ec215c2a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -1147,6 +1147,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/jquery_ui_effects' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'reference' => '8.x-1.2',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/jquery_ui_effects',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/jquery_ui_slider' => array(
             'pretty_version' => '1.1.0',
             'version' => '1.1.0.0',
@@ -1429,7 +1438,7 @@
         'drupal/recommended-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '8056bf2323bf437ceda4077b1fdece75d964fb81',
+            'reference' => 'f326d447e9d1e88147d0d5eb5b525648ec215c2a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

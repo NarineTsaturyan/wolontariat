@@ -5,6 +5,25 @@ input[type=checkbox] {
   margin: 4px 4px 0 ;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .container {
+    width: 1220px;
+  }
+}
+
+@media (min-width: 1380px) {
+  .container {
+    width: 1380px;
+  }
+}
+
+
 .path-frontpage {
   font-family: "Open-Sans", sans-serif;
   margin-top: 0;
@@ -27,9 +46,8 @@ input[type=checkbox] {
             width: 100%;
           }
           .navbar-header {
+            width: 100%;
             .region-navigation {
-              align-items: center;
-              display: flex;
 
               .logo {
                 padding: 0;
@@ -73,7 +91,6 @@ input[type=checkbox] {
                       .form-search {
                         width: 144px;
                         border-radius: 0;
-                        visibility: hidden;
                       }
 
                       .input-group-btn {
@@ -274,9 +291,8 @@ body {
       .container-fluid {
         .container {
           .navbar-header {
+            width: 100%;
             .region-navigation {
-              align-items: center;
-              display: flex;
 
               .logo {
                 padding: 0;
@@ -322,7 +338,6 @@ body {
                       .form-search {
                         width: 144px;
                         border-radius: 0;
-                        visibility: hidden;
                       }
 
                       .input-group-btn {
@@ -730,3 +745,18 @@ body {
   }
 }
 
+.search-block-form {
+  float: right;
+  width: 184px;
+  margin-top: 25px;
+  .input-group-btn .button {
+    float: right;
+  }
+  .form-search {
+    display: none;
+  }
+}
+
+#block-wolontariat-main-menu {
+  float: left;
+}

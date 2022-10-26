@@ -6,6 +6,21 @@ input[type=checkbox] {
   margin: 4px 4px 0;
 }
 
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1250px) {
+  .container {
+    width: 1220px;
+  }
+}
+@media (min-width: 1380px) {
+  .container {
+    width: 1380px;
+  }
+}
 .path-frontpage {
   font-family: "Open-Sans", sans-serif;
   margin-top: 0;
@@ -26,9 +41,8 @@ input[type=checkbox] {
     width: 100%;
   }
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation {
-  align-items: center;
-  display: flex;
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header {
+  width: 100%;
 }
 .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo {
   padding: 0;
@@ -62,7 +76,6 @@ input[type=checkbox] {
 .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form .form-item .input-group .form-search {
   width: 144px;
   border-radius: 0;
-  visibility: hidden;
 }
 .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form .form-item .input-group .input-group-btn .button {
   border-radius: 0;
@@ -106,11 +119,6 @@ input[type=checkbox] {
   width: 100%;
   background: rgba(0, 0, 0, 0.6);
   padding: 25px 0;
-}
-.path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-link:hover {
-  text-decoration: none;
-  background: rgba(0, 0, 0, 0.7);
-  transition: 0.5s all;
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-link a {
   color: #fff;
@@ -228,9 +236,8 @@ body .dialog-off-canvas-main-canvas header {
   margin-bottom: 0;
   background-color: #f8f8f8;
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation {
-  align-items: center;
-  display: flex;
+body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header {
+  width: 100%;
 }
 body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo {
   padding: 0;
@@ -264,7 +271,6 @@ body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-h
 body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form .form-item .input-group .form-search {
   width: 144px;
   border-radius: 0;
-  visibility: hidden;
 }
 body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form .form-item .input-group .input-group-btn .button {
   border-radius: 0;
@@ -591,4 +597,20 @@ body .dialog-off-canvas-main-canvas .footer-second .container .region-footer-sec
   padding: 0;
   border: 0;
   height: auto;
+}
+
+.search-block-form {
+  float: right;
+  width: 184px;
+  margin-top: 25px;
+}
+.search-block-form .input-group-btn .button {
+  float: right;
+}
+.search-block-form .form-search {
+  display: none;
+}
+
+#block-wolontariat-main-menu {
+  float: left;
 }

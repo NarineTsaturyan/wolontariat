@@ -77,6 +77,8 @@
         "drupal/image_widget_crop": "^2.3",
         "drupal/imagefield_tokens": "^2.23",
         "drupal/imce": "^2.4",
+        "drupal/jquery_ui": "^1.4",
+        "drupal/jquery_ui_effects": "^1.2",
         "drupal/jquery_ui_tooltip": "^1.1",
         "drupal/ldap": "^4.3",
         "drupal/link_attributes": "^1.11",
