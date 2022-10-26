@@ -17,6 +17,7 @@ dependencies:
     - taxonomy
     - text
     - user
+    - verf
 id: znajdz_wolontariat
 label: 'Znajdź wolontariat'
 module: views
@@ -412,6 +413,56 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_organizacja_target_id_verf:
+          id: field_organizacja_target_id_verf
+          table: node__field_organizacja
+          field: field_organizacja_target_id_verf
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: verf
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_organizacja_target_id_verf_op
+            label: Organizacja
+            description: ''
+            use_operator: false
+            operator: field_organizacja_target_id_verf_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: organizacja
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              adminis: '0'
+            reduce: 0
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          verf_target_bundles:
+            organizacja: organizacja
+            article: '0'
+            banner: '0'
+            oferta_wolontariatu: '0'
+            page: '0'
+          show_unpublished: 0
         field_kategorie_target_id:
           id: field_kategorie_target_id
           table: node__field_kategorie
@@ -650,17 +701,7 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        reverse__node__field_organizacja:
-          id: reverse__node__field_organizacja
-          table: node_field_data
-          field: reverse__node__field_organizacja
-          relationship: none
-          group_type: group
-          admin_label: field_organizacja
-          entity_type: node
-          plugin_id: entity_reverse
-          required: false
+      relationships: {  }
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -688,6 +729,8 @@ display:
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:field.storage.node.body'
+        - 'config:views.view.znajdz_wolontariat'
+        - node_list
   page_1:
     id: page_1
     display_title: Page
@@ -729,3 +772,5 @@ display:
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:field.storage.node.body'
+        - 'config:views.view.znajdz_wolontariat'
+        - node_list

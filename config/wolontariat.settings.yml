@@ -1,6 +1,4 @@
-schemas:
-  bootstrap: 8000
-  wolontariat: 8000
+langcode: pl
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
@@ -15,3 +13,6 @@ logo:
   path: ''
   url: ''
   use_default: true
+schemas:
+  bootstrap: 8000
+  wolontariat: 8000
