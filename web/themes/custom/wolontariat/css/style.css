@@ -107,6 +107,11 @@ input[type=checkbox] {
   background: rgba(0, 0, 0, 0.6);
   padding: 25px 0;
 }
+.path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-link:hover {
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.5s all;
+}
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-link a {
   color: #fff;
   font-size: 20px;
