@@ -572,3 +572,18 @@ body .dialog-off-canvas-main-canvas .footer-second .container .region-footer-sec
   font-size: 13px;
   line-height: 2.3;
 }
+
+.form-inline .form-item-organizacja {
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+.form-inline .form-item-organizacja .select-wrapper {
+  max-width: 100%;
+  margin-top: 6px;
+}
+.form-inline .form-item-organizacja .form-control {
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  height: auto;
+}

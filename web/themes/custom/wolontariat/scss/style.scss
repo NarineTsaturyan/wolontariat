@@ -1,6 +1,6 @@
 a{
   color: #007481;
-}  
+}
 input[type=checkbox] {
   margin: 4px 4px 0 ;
 }
@@ -35,7 +35,7 @@ input[type=checkbox] {
                 padding: 0;
                 margin: 0;
                 margin-right: 2em;
-                
+
                 img {
                   width: 205px;
                 }
@@ -165,7 +165,7 @@ input[type=checkbox] {
           display: none;
         }
       }
-      
+
     }
     .footer {
       font-size: 13px;
@@ -255,9 +255,6 @@ input[type=checkbox] {
   }
 }
 
-
-
-
 body {
   font-family: "Open-Sans", sans-serif;
   margin-top: 0;
@@ -285,7 +282,7 @@ body {
                 padding: 0;
                 margin: 0;
                 margin-right: 2em;
-                
+
                 img {
                   width: 205px;
                 }
@@ -301,18 +298,18 @@ body {
                   font-size: 14px;
                   @media(max-width:1200px) {
                     padding: 15px;
-                  } 
+                  }
                 }
                 &:hover {
                   background-color: #e7e7e7;
                 }
-                
+
               }
               .active a{
                 background-color: transparent;
               }
             }
-            
+
           }
 
               .search-block-form {
@@ -351,14 +348,14 @@ body {
           .region-content {
             .page-header {
               margin: 40px 0 20px;
-            } 
+            }
             .views-element-container {
               .view-lista-organizacji {
                 .view-header {
                   margin: 2em 9em 3em 8em;
                   font-size: 16px;
                   @media(max-width:750px) {
-                    margin: 2em 0em 3em 0em;  
+                    margin: 2em 0em 3em 0em;
                   }
                 }
                 .view-content {
@@ -371,7 +368,7 @@ body {
                       padding-bottom: 1em;
                       h2 {
                         font-size: 24px;
-                        margin: 15px 0; 
+                        margin: 15px 0;
                         margin-left: 130px;
                         position: absolute;
                         a {
@@ -462,7 +459,7 @@ body {
                       padding-bottom: 1em;
                       h2 {
                         font-size: 24px;
-                        margin: 10px 0; 
+                        margin: 10px 0;
                         color: #333333;
                       }
                       .content {
@@ -544,8 +541,8 @@ body {
                         }
                         }
                         legend {
-                          margin-bottom: 0px; 
-                          border-bottom: 0; 
+                          margin-bottom: 0px;
+                          border-bottom: 0;
                       }
                     }
                   }
@@ -610,7 +607,7 @@ body {
                     }
                     // background-color: #007481;
                     .field--name-field-data-wydarzenia {
-                      font-size: 24px; 
+                      font-size: 24px;
                       .field--label {
                         font-weight: normal;
                       }
@@ -716,3 +713,20 @@ body {
     }
   }
 }
+.form-inline {
+  .form-item-organizacja {
+    margin-bottom: 10px;
+    max-width: 100%;
+    .select-wrapper {
+      max-width: 100%;
+      margin-top: 6px;
+    }
+    .form-control {
+      max-width: 100%;
+      padding: 0;
+      border: 0;
+      height: auto;
+    }
+  }
+}
+
