@@ -5,10 +5,14 @@ dependencies:
   content:
     - 'block_content:centrum_wolontariatu_sgh:2c054f5b-7c27-493a-a9db-c180baf5dfe2'
   module:
+    - block_class
     - block_content
     - system
   theme:
     - wolontariat
+third_party_settings:
+  block_class:
+    classes: 'col-lg-4 col-md-4 col-xs-12'
 id: second
 theme: wolontariat
 region: content

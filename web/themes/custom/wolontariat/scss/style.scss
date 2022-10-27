@@ -134,16 +134,13 @@ input[type=checkbox] {
         .page-header {
           text-align: center;
           padding-bottom: 15px;
-          margin: 0px 0 20px !important;
+          margin: 0 15px 20px !important;
           border-bottom: 4px solid #000;
         }
         article {
           display: none;
         }
         section {
-          width: 30%;
-          float: left;
-          margin-left: 25px;
           @media(max-width:998px) {
             width: 100%;
             margin-bottom: 25px;
@@ -170,9 +167,9 @@ input[type=checkbox] {
             img {
               height: 300px;
               object-fit: cover;
+              width: 100%;
               @media(max-width: 1000px) {
                 height: auto;
-                width: 100%;
                 object-fit: fill;
               }
             }
@@ -182,7 +179,6 @@ input[type=checkbox] {
           display: none;
         }
       }
-
     }
     .footer {
       font-size: 13px;
@@ -759,4 +755,8 @@ body {
 
 #block-wolontariat-main-menu {
   float: left;
+}
+
+.flexslider {
+  border: 0;
 }

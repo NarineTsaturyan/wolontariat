@@ -94,16 +94,11 @@ input[type=checkbox] {
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content .page-header {
   text-align: center;
   padding-bottom: 15px;
-  margin: 0px 0 20px !important;
+  margin: 0 15px 20px !important;
   border-bottom: 4px solid #000;
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content article {
   display: none;
-}
-.path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section {
-  width: 30%;
-  float: left;
-  margin-left: 25px;
 }
 @media (max-width: 998px) {
   .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section {
@@ -132,11 +127,11 @@ input[type=checkbox] {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
 }
 @media (max-width: 1000px) {
   .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-image img {
     height: auto;
-    width: 100%;
     -o-object-fit: fill;
        object-fit: fill;
   }
@@ -613,4 +608,8 @@ body .dialog-off-canvas-main-canvas .footer-second .container .region-footer-sec
 
 #block-wolontariat-main-menu {
   float: left;
+}
+
+.flexslider {
+  border: 0;
 }
