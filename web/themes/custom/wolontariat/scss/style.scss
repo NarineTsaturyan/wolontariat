@@ -45,10 +45,9 @@ input[type=checkbox] {
             margin: 0;
             width: 100%;
           }
-          .navbar-header {
+          #navbar-collapse {
             width: 100%;
-            .region-navigation {
-
+            .region-navigation-collapsible {
               .logo {
                 padding: 0;
                 margin: 0;
@@ -286,9 +285,9 @@ body {
 
       .container-fluid {
         .container {
-          .navbar-header {
+          #navbar-collapse {
             width: 100%;
-            .region-navigation {
+            .region-navigation-collapsible {
 
               .logo {
                 padding: 0;

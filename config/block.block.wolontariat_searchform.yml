@@ -8,8 +8,8 @@ dependencies:
     - wolontariat
 id: wolontariat_searchform
 theme: wolontariat
-region: navigation
-weight: -6
+region: navigation_collapsible
+weight: -7
 provider: null
 plugin: search_form_block
 settings:

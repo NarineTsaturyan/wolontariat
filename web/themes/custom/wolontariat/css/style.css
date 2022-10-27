@@ -41,43 +41,43 @@ input[type=checkbox] {
     width: 100%;
   }
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header {
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse {
   width: 100%;
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo {
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .logo {
   padding: 0;
   margin: 0;
   margin-right: 2em;
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo img {
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .logo img {
   width: 205px;
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav li a {
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible #block-wolontariat-main-menu .navbar-nav li a {
   color: #000;
   text-transform: uppercase;
   padding: 35px 25px 25px;
   font-size: 14px;
 }
 @media (max-width: 1200px) {
-  .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav li a {
+  .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible #block-wolontariat-main-menu .navbar-nav li a {
     padding: 15px;
   }
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav li a:active {
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible #block-wolontariat-main-menu .navbar-nav li a:active {
   background-color: transparent;
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav li:hover {
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible #block-wolontariat-main-menu .navbar-nav li:hover {
   background-color: #e7e7e7;
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form {
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .search-block-form #search-block-form {
   height: 31px;
   float: right;
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form .form-item .input-group .form-search {
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .search-block-form #search-block-form .form-item .input-group .form-search {
   width: 144px;
   border-radius: 0;
 }
-.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form .form-item .input-group .input-group-btn .button {
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .search-block-form #search-block-form .form-item .input-group .input-group-btn .button {
   border-radius: 0;
   background-color: #007481;
 }
@@ -231,43 +231,43 @@ body .dialog-off-canvas-main-canvas header {
   margin-bottom: 0;
   background-color: #f8f8f8;
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header {
+body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse {
   width: 100%;
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo {
+body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .logo {
   padding: 0;
   margin: 0;
   margin-right: 2em;
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo img {
+body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .logo img {
   width: 205px;
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav li a {
+body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible #block-wolontariat-main-menu .navbar-nav li a {
   color: #000;
   text-transform: uppercase;
   padding: 35px 25px 25px;
   font-size: 14px;
 }
 @media (max-width: 1200px) {
-  body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav li a {
+  body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible #block-wolontariat-main-menu .navbar-nav li a {
     padding: 15px;
   }
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav li:hover {
+body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible #block-wolontariat-main-menu .navbar-nav li:hover {
   background-color: #e7e7e7;
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation #block-wolontariat-main-menu .navbar-nav .active a {
+body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible #block-wolontariat-main-menu .navbar-nav .active a {
   background-color: transparent;
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form {
+body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .search-block-form #search-block-form {
   height: 31px;
   float: right;
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form .form-item .input-group .form-search {
+body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .search-block-form #search-block-form .form-item .input-group .form-search {
   width: 144px;
   border-radius: 0;
 }
-body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .search-block-form #search-block-form .form-item .input-group .input-group-btn .button {
+body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .search-block-form #search-block-form .form-item .input-group .input-group-btn .button {
   border-radius: 0;
   background-color: #007481;
 }

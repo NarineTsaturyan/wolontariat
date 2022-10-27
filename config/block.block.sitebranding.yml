@@ -8,8 +8,8 @@ dependencies:
     - wolontariat
 id: sitebranding
 theme: wolontariat
-region: navigation
-weight: -8
+region: navigation_collapsible
+weight: -9
 provider: null
 plugin: system_branding_block
 settings:

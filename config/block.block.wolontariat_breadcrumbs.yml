@@ -11,7 +11,7 @@ _core:
 id: wolontariat_breadcrumbs
 theme: wolontariat
 region: navigation
-weight: -3
+weight: -8
 provider: null
 plugin: system_breadcrumb_block
 settings:
