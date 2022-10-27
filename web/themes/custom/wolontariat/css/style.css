@@ -613,3 +613,8 @@ body .dialog-off-canvas-main-canvas .footer-second .container .region-footer-sec
 .flexslider {
   border: 0;
 }
+
+.view-glossary .view-content {
+  float: left;
+  margin-right: 20px;
+}
