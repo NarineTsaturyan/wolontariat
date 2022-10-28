@@ -35,6 +35,11 @@ input[type=checkbox] {
   background: rgba(255, 255, 255, 0.85);
   position: absolute;
 }
+@media (max-width: 1000px) {
+  .path-frontpage .dialog-off-canvas-main-canvas header {
+    position: unset;
+  }
+}
 @media (max-width: 1200px) {
   .path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container {
     margin: 0;
@@ -81,6 +86,17 @@ input[type=checkbox] {
   border-radius: 0;
   background-color: #007481;
 }
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo {
+  padding: 0;
+  margin: 0;
+  margin-right: 2em;
+}
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo img {
+  width: 205px;
+}
+.path-frontpage .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .navbar-toggle {
+  margin-top: 20px;
+}
 .path-frontpage .dialog-off-canvas-main-canvas .region-banner .views-element-container .form-group .view-banner .view-content div .flex-control-paging {
   display: none;
 }
@@ -103,7 +119,6 @@ input[type=checkbox] {
 @media (max-width: 998px) {
   .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section {
     width: 100%;
-    margin-bottom: 25px;
   }
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-link {
@@ -123,6 +138,9 @@ input[type=checkbox] {
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-link a:hover {
   text-decoration: none;
 }
+.path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-image {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12), 1px 2px 3px rgba(0, 0, 0, 0.24);
+}
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-image img {
   height: 300px;
   -o-object-fit: cover;
@@ -131,9 +149,8 @@ input[type=checkbox] {
 }
 @media (max-width: 1000px) {
   .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content section .field--name-field-image img {
-    height: auto;
-    -o-object-fit: fill;
-       object-fit: fill;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 .path-frontpage .dialog-off-canvas-main-canvas .main-container .region-content .views-element-container {
@@ -270,6 +287,17 @@ body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-c
 body .dialog-off-canvas-main-canvas header .container-fluid .container #navbar-collapse .region-navigation-collapsible .search-block-form #search-block-form .form-item .input-group .input-group-btn .button {
   border-radius: 0;
   background-color: #007481;
+}
+body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo {
+  padding: 0;
+  margin: 0;
+  margin-right: 2em;
+}
+body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .region-navigation .logo img {
+  width: 205px;
+}
+body .dialog-off-canvas-main-canvas header .container-fluid .container .navbar-header .navbar-toggle {
+  margin-top: 20px;
 }
 body .dialog-off-canvas-main-canvas .main-container {
   margin-bottom: 50px;

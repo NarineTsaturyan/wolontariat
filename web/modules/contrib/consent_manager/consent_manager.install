@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the consent manager module.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function consent_manager_requirements($phase) {
+  $requirements = [];
+
+  if ($phase === 'runtime') {
+    if (\Drupal::config('consent_manager.settings')->get('cdid')) {
+      $requirements['consent_manager'] = [
+        'title' => 'Consent manager',
+        'value' => t('Consent manager Code-ID exists.'),
+        'severity' => REQUIREMENT_OK,
+      ];
+    }
+    else {
+      $requirements['consent_manager'] = [
+        'title' => 'Consent manager',
+        'value' => t('Consent manager Code-ID doesn\'t exists.'),
+        'description' => t('You need to set the Code-ID value on this <a href=":link" target="_blank">page</a>.', [':link' => '/admin/config/services/consent-manager']),
+        'severity' => REQUIREMENT_ERROR,
+      ];
+    }
+  }
+
+  return $requirements;
+}

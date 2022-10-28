@@ -38,7 +38,9 @@ input[type=checkbox] {
       width: 100%;
       background: rgba(255, 255, 255, 0.85);
       position: absolute;
-
+      @media(max-width:1000px) {
+        position: unset;
+      }
       .container-fluid {
         .container {
           @media(max-width:1200px) {
@@ -104,6 +106,24 @@ input[type=checkbox] {
               }
             }
           }
+          .navbar-header {
+            // width: 100%;
+            .region-navigation {
+              .logo {
+                padding: 0;
+                margin: 0;
+                margin-right: 2em;
+
+                img {
+                  width: 205px;
+                }
+              }
+
+            }
+            .navbar-toggle {
+              margin-top: 20px;
+          }
+          }
         }
       }
     }
@@ -142,7 +162,7 @@ input[type=checkbox] {
         section {
           @media(max-width:998px) {
             width: 100%;
-            margin-bottom: 25px;
+            // margin-bottom: 25px;
           }
           .field--name-field-link {
             box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12), 1px 2px 3px rgba(0, 0, 0, 0.24);
@@ -163,13 +183,13 @@ input[type=checkbox] {
             }
           }
           .field--name-field-image {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.12), 1px 2px 3px rgba(0, 0, 0, 0.24);
             img {
               height: 300px;
               object-fit: cover;
               width: 100%;
               @media(max-width: 1000px) {
-                height: auto;
-                object-fit: fill;
+                object-position: top;
               }
             }
           }
@@ -346,6 +366,23 @@ body {
                 }
               }
             }
+          }
+          .navbar-header {
+            // width: 100%;
+            .region-navigation {
+              .logo {
+                padding: 0;
+                margin: 0;
+                margin-right: 2em;
+
+                img {
+                  width: 205px;
+                }
+              }
+            }
+            .navbar-toggle {
+              margin-top: 20px;
+          }
           }
         }
       }

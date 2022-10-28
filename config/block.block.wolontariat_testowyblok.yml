@@ -12,7 +12,7 @@ dependencies:
 id: wolontariat_testowyblok
 theme: wolontariat
 region: navigation
-weight: -7
+weight: -6
 provider: null
 plugin: 'block_content:c2cf1287-1784-4fdd-ae7e-00b59f2d7f17'
 settings:
